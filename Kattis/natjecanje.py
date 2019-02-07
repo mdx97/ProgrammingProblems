@@ -11,15 +11,13 @@ reserve_indices = input().split()
 reserve_indices = set([int(x) for x in reserve_indices])
 reserve = [True if i in reserve_indices else False for i in range(N + 1)]
 
-# First, if a team has a reserve kayak and a damaged one. 
-# The team will use their own reserve kayak.
+# First, if a team has a reserve kayak and a damaged one, they will use their own reserve kayak.
 for kayak in list(reserve_indices):
     if damaged[kayak]:
         damaged[kayak] = False
         reserve[kayak] = False
 
-# Now give out reserve kayaks that are left to neighbors
-# with damaged kayaks.
+# Now give out reserve kayaks that are left to neighbors with damaged kayaks.
 for i in range(1, N + 1):
     if damaged[i]:
         if reserve[i - 1]:
