@@ -8,11 +8,11 @@ class Solution:
         distances = []
 
         for j in range(0, len(S)):
-            smallest_sum = len(S)
+            small_total = len(S)
             for char_index in indices:
-                sum = abs(char_index - j)
-                if (sum < smallest_sum):
-                    smallest_sum = sum
-            distances.append(smallest_sum)
+                total = abs(char_index - j)
+                if (total < small_total):
+                    small_total = total 
+            distances.append(small_total)
 
         return distances

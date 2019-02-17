@@ -1,8 +1,4 @@
-class TreeNode(object):
-    def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
+from common import TreeNode
 
 class Solution(object):
     def largestValues(self, root):
