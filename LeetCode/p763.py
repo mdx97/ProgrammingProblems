@@ -1,25 +1,24 @@
 class Solution(object):
     def partitionLabels(self, S):
         dictionary = {}
-
         for x in range(len(S)):
             c = S[x]
             dictionary[c] = x
 
-        uniqueVals = []
+        unique_vals = []
 
         for x in range(len(dictionary)):
             val = dictionary.values()[x]
-            if (val not in uniqueVals):
-                uniqueVals.append(val)
+            if (val not in unique_vals):
+                unique_vals.append(val)
         
-        uniqueVals.sort()
+        unique_vals.sort()
         splits = []
-        splitTotal = 0
+        split_total = 0
 
-        for uniqueVal in uniqueVals:
-            splits.append(uniqueVal - splitTotal)
-            splitTotal += uniqueVal
+        for unique_val in unique_vals:
+            splits.append(unique_val - split_total)
+            split_total += unique_val
         
         return splits
 

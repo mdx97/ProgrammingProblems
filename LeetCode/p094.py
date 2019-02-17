@@ -16,6 +16,6 @@ class Solution:
                 stack.append(curr)
                 curr = curr.left
             curr = stack.pop()
-            res.add(curr.val)
+            res.append(curr.val)
             curr = curr.right
         return res

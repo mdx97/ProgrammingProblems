@@ -1,21 +1,18 @@
+class Solution:
+    def shortestToChar(self, S, C):
+        indices = []
+        for i in range(0, len(S)):
+            if (S[i] == C):
+                indices.append(i)
+        
+        distances = []
 
-def shortestToChar(S, C):
-    indices = []
+        for j in range(0, len(S)):
+            smallest_sum = len(S)
+            for char_index in indices:
+                sum = abs(char_index - j)
+                if (sum < smallest_sum):
+                    smallest_sum = sum
+            distances.append(smallest_sum)
 
-    for i in range(0, len(S)):
-        if (S[i] == C):
-            indices.append(i)
-    
-    distances = []
-
-    for j in range(0, len(S)):
-        smallestSum = len(S)
-
-        for charIndex in indices:
-            sum = abs(charIndex - j)
-            if (sum < smallestSum):
-                smallestSum = sum
-
-        distances.append(smallestSum)
-
-    return distances
+        return distances

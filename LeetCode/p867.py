@@ -1,6 +1,5 @@
 def transpose(A):
     matrix = []
-
     if (len(A) > 0):
         for x in range(len(A[0])):
             row = []

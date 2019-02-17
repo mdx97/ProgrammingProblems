@@ -2,7 +2,6 @@ class Solution(object):
     def findAndReplacePattern(self, words, pattern):
         patternRepresentation = self.stringToDigitRepresentation(pattern)
         matches = []
-
         for word in words:
             if (self.stringToDigitRepresentation(word) == patternRepresentation):
                 matches.append(word)
@@ -13,7 +12,6 @@ class Solution(object):
         dictionary = {}
         nextInt = 1
         representation = ""
-
         for c in string:
             if (c not in dictionary):
                 dictionary[c] = nextInt
