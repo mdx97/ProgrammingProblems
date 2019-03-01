@@ -32,6 +32,6 @@ class Solution(object):
         return head
 
 sol = Solution()
-ll1 = build_linked_list([0])
-ll2 = build_linked_list([0])
+ll1 = build_linked_list([2, 4, 3])
+ll2 = build_linked_list([5, 6, 4])
 print(sol.addTwoNumbers(ll1, ll2))
