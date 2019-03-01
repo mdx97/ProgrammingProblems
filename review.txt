@@ -1,3 +1,4 @@
 * Review 7 days after completion and then remove from the list. Or add back to the list if more review is needed.
 
-March 1 - LeetCode Problem 1 (TwoSum)
+March 1 - LC #1 (TwoSum)
+March 1 - LC #2 (Add Two Numbers)
