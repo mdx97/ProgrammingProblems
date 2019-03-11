@@ -8,8 +8,6 @@ class Solution(object):
     def pruneTreeRC(self, root):
         if root is None:
             return False
-        if not root.left and not root.right:
-            return True if root.val == 1 else False
         left_has_1 = self.pruneTreeRC(root.left)
         right_has_1 = self.pruneTreeRC(root.right)
         if not left_has_1:
