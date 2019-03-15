@@ -1,3 +1,8 @@
+class Node:
+    def __init__(self, val, children):
+        self.val = val
+        self.children = children
+        
 class TreeNode:
     def __init__(self, val):
         self.val = val
