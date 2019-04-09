@@ -1,3 +1,8 @@
+"""
+    Given an array of integers, return a new array such that each element at index i of the new array is the product of all the numbers in the original array except the one at i.
+
+    For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120, 60, 40, 30, 24]. If our input was [3, 2, 1], the expected output would be [2, 3, 6].
+"""
 # Naive Solution: For each "slot" i in the array, take the product of all numbers from the original array except the number at i.
 # Time Complexity: O(n^2)
 # Space Complexity: O(n)
@@ -39,7 +44,7 @@ def exclusive_product3(arr):
     n = len(arr)
     p1 = [0 for x in range(n)]
     p2 = [0 for x in range(n)]
-    
+
     prod = 1 
     for i in range(n):
         prod *= arr[i]
