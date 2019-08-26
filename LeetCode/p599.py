@@ -44,19 +44,17 @@ class Solution2:
         
         return ans
 
-# Two Dictionary and Set Intersection Solution.
+# Single Loop Solution
 class Solution3:
     def findRestaurant(self, list1: List[str], list2: List[str]) -> List[str]:
         list1_is = {val: i for i, val in enumerate(list1)}
-        list2_is = {val: i for i, val in enumerate(list2)}
-        
-        candidates = set(list1).intersection(set(list2))
         
         least_index_sum = -1
         ans = []
         
-        for cand in candidates:
-            index_sum = list1_is[cand] + list2_is[cand]
+        for i, val in enumerate(list2):
+            if val not in list1_is: continue
+            index_sum = list1_is[val] + i
             if index_sum < least_index_sum or least_index_sum == -1:
                 least_index_sum = index_sum
                 ans = [cand]
