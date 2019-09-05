@@ -1,19 +1,8 @@
 from common import TreeNode
 
 class Solution(object):
-    def maxDepth(self, root):
+    class Solution:
+    def maxDepth(self, root: TreeNode) -> int:
         if not root:
             return 0
-        return self.depth(root)
-    
-    def depth(self, node):
-        if (not node.left and not node.right):
-            return 1
-        left = 0
-        right = 0
-        if node.left:
-            left = self.depth(node.left)
-        if node.right:
-            right = self.depth(node.right)
-        
-        return 1 + max(left, right)
+        return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
