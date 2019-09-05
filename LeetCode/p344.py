@@ -1,10 +1,11 @@
 class Solution:
     def reverseString(self, s):
-        char_stack = []
-        for c in s:
-            char_stack.append(c)
-        reverse = ""
-        while (len(char_stack) > 0):
-            reverse += char_stack.pop()
-
-        return reverse
+        lo = 0
+        hi = len(s) - 1
+        
+        while hi > lo:
+            temp = s[hi]
+            s[hi] = s[lo]
+            s[lo] = temp
+            hi -= 1
+            lo += 1
